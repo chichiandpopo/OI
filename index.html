@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -84,6 +85,7 @@ body{font-family:'Noto Sans KR',sans-serif;
 .table-header{display:grid;grid-template-columns:56px 26px 40px 1fr 1fr 52px 18px;
   background:rgba(226,194,107,0.1);padding:7px 4px;gap:2px;align-items:center;}
 .th{font-size:10.5px;font-weight:700;color:#e2c26b;letter-spacing:0.3px;}
+.th-hint{display:block;font-size:7px;font-weight:500;color:#b8a48f;line-height:1.3;margin-top:1px;}
 .no-show{padding:5px 8px;background:rgba(0,0,0,0.2);font-size:10px;color:#a89685;text-align:center;
   border-top:1px solid rgba(226,194,107,0.1);font-style:italic;}
 .row{display:grid;grid-template-columns:56px 26px 40px 1fr 1fr 52px 18px;
@@ -118,7 +120,8 @@ body{font-family:'Noto Sans KR',sans-serif;
   font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;}
 .seat-tags{display:flex;flex-wrap:wrap;gap:1px;justify-content:center;}
 .seat-tag{font-size:9px;font-weight:700;padding:2px 5px;border-radius:6px;cursor:pointer;
-  display:inline-flex;align-items:center;gap:2px;color:white;}
+  display:inline-flex;align-items:center;gap:2px;color:#f3ebe1;background:rgba(255,255,255,0.1);
+  border:1.5px solid #999;}
 
 /* ---------- counting ---------- */
 .settle-title{text-align:center;font-size:15px;font-weight:700;color:#ecd191;letter-spacing:2px;
@@ -150,8 +153,8 @@ body{font-family:'Noto Sans KR',sans-serif;
 .stage-box-mini{background:#0f0808;color:#ecd191;border-radius:4px;text-align:center;font-size:10.5px;
   font-weight:700;padding:6px 0;letter-spacing:5px;margin:0 auto 14px;width:80%;
   border:1px solid rgba(226,194,107,0.4);}
-.zone-scroll{overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
-.zone-row{display:inline-flex;gap:10px;padding:0 6px;margin:0 auto;justify-content:center;min-width:100%;align-items:flex-start;}
+.zone-scroll{overflow:hidden;display:flex;justify-content:center;}
+.zone-row{display:flex;gap:6px;padding:0;margin:0;justify-content:center;align-items:flex-start;}
 .zone-block{flex-shrink:0;}
 .zone-label{font-size:9.5px;font-weight:700;color:#c9a24a;text-align:center;margin-bottom:5px;
   letter-spacing:1px;white-space:nowrap;}
@@ -183,6 +186,7 @@ body{font-family:'Noto Sans KR',sans-serif;
   .row{grid-template-columns:82px 34px 52px 1fr 1fr 88px 24px;padding:8px 10px;gap:4px;}
   .table-header{grid-template-columns:82px 34px 52px 1fr 1fr 88px 24px;padding:9px 10px;}
   .th{font-size:13px;}
+  .th-hint{font-size:9px;}
   .cell{font-size:13px;}.cell.date{font-size:13.5px;}.cell.time{font-size:12px;}
   .role-pill{font-size:13px;padding:2px 7px;}
   .cell.actor-cell{font-size:13.5px;}
@@ -219,8 +223,6 @@ body{font-family:'Noto Sans KR',sans-serif;
 <div class="hero">
   <div class="hero-inner">
     <div class="presents">MUSICAL</div>
-    <div class="brush-title">OTHELLO AND IAGO</div>
-    <div class="title-en">원작 윌리엄 셰익스피어 『오셀로』</div>
     <div class="title-kr">오셀로와 이아고</div>
     <div class="hero-meta">
       <b>2026.9.8(TUE) – 11.22(SUN)</b><br>대학로 자유극장
@@ -271,26 +273,26 @@ body{font-family:'Noto Sans KR',sans-serif;
 <div class="count-info" id="countInfo">전체 0회</div>
 
 <div class="table-wrap">
-<div class="table-header"><div class="th" style="text-align:left;">날짜</div><div class="th" style="text-align:center;">요일</div><div class="th" style="text-align:center;">시간</div><div class="th" style="text-align:center;">오셀로</div><div class="th" style="text-align:center;">이아고</div><div class="th" style="text-align:center;">좌석</div><div class="th" style="text-align:center;"></div></div>
-<div class="row osel-gimjion" data-sid="0908-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 8일<a class="event-tag" href="#" target="_blank" rel="noopener">첫공무대인사</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온<span class="fb">첫</span></span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0908-1930" placeholder="C-D-10"><button onclick="confirmSeat('0908-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0908-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0908-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-parkgyuwon" data-sid="0909-1930" data-osel="parkgyuwon" data-iago="gimkyungrok"><div class="cell date">9월 9일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0909-1930" placeholder="C-D-10"><button onclick="confirmSeat('0909-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0909-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0909-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-byunheesang" data-sid="0910-1930" data-osel="byunheesang" data-iago="yangjiwon"><div class="cell date">9월 10일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0910-1930" placeholder="C-D-10"><button onclick="confirmSeat('0910-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0910-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0910-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-gimjion" data-sid="0911-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 11일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0911-1930" placeholder="C-D-10"><button onclick="confirmSeat('0911-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0911-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0911-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-parkgyuwon" data-sid="0912-1400" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1400" placeholder="C-D-10"><button onclick="confirmSeat('0912-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1400')" title="복사">🎤</button></div></div>
-<div class="row osel-byunheesang" data-sid="0912-1900" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1900" placeholder="C-D-10"><button onclick="confirmSeat('0912-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1900')" title="복사">🎤</button></div></div>
-<div class="row osel-gimjion" data-sid="0913-1400" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 13일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0913-1400" placeholder="C-D-10"><button onclick="confirmSeat('0913-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0913-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0913-1400')" title="복사">🎤</button></div></div>
+<div class="table-header"><div class="th" style="text-align:left;">날짜</div><div class="th" style="text-align:center;">요일</div><div class="th" style="text-align:center;">시간</div><div class="th" style="text-align:center;">오셀로</div><div class="th" style="text-align:center;">이아고</div><div class="th" style="text-align:center;">좌석<span class="th-hint">열-번호<br>(예: A-9)</span></div><div class="th"></div></div>
+<div class="row osel-gimjion" data-sid="0908-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 8일<a class="event-tag" href="#" target="_blank" rel="noopener">첫공무대인사</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온<span class="fb">첫</span></span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0908-1930" placeholder="A-13"><button onclick="confirmSeat('0908-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0908-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0908-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0909-1930" data-osel="parkgyuwon" data-iago="gimkyungrok"><div class="cell date">9월 9일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0909-1930" placeholder="A-13"><button onclick="confirmSeat('0909-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0909-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0909-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0910-1930" data-osel="byunheesang" data-iago="yangjiwon"><div class="cell date">9월 10일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0910-1930" placeholder="A-13"><button onclick="confirmSeat('0910-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0910-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0910-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0911-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 11일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0911-1930" placeholder="A-13"><button onclick="confirmSeat('0911-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0911-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0911-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0912-1400" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1400" placeholder="A-13"><button onclick="confirmSeat('0912-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1400')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0912-1900" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1900" placeholder="A-13"><button onclick="confirmSeat('0912-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1900')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0913-1400" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 13일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0913-1400" placeholder="A-13"><button onclick="confirmSeat('0913-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0913-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0913-1400')" title="복사">🎤</button></div></div>
 <div class="no-show" data-noshow="1">9월 14일 (월) — 공연 없음</div>
-<div class="row osel-parkgyuwon" data-sid="0915-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 15일</div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0915-1930" placeholder="C-D-10"><button onclick="confirmSeat('0915-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0915-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0915-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-byunheesang" data-sid="0916-1930" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 16일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0916-1930" placeholder="C-D-10"><button onclick="confirmSeat('0916-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0916-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0916-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-gimjion" data-sid="0917-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 17일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0917-1930" placeholder="C-D-10"><button onclick="confirmSeat('0917-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0917-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0917-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-parkgyuwon" data-sid="0918-1930" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 18일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0918-1930" placeholder="C-D-10"><button onclick="confirmSeat('0918-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0918-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0918-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-byunheesang" data-sid="0919-1400" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1400" placeholder="C-D-10"><button onclick="confirmSeat('0919-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1400')" title="복사">🎤</button></div></div>
-<div class="row osel-gimjion" data-sid="0919-1900" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1900" placeholder="C-D-10"><button onclick="confirmSeat('0919-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1900')" title="복사">🎤</button></div></div>
-<div class="row osel-parkgyuwon" data-sid="0920-1400" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 20일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0920-1400" placeholder="C-D-10"><button onclick="confirmSeat('0920-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0920-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0920-1400')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0915-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 15일</div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0915-1930" placeholder="A-13"><button onclick="confirmSeat('0915-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0915-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0915-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0916-1930" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 16일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0916-1930" placeholder="A-13"><button onclick="confirmSeat('0916-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0916-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0916-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0917-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 17일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0917-1930" placeholder="A-13"><button onclick="confirmSeat('0917-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0917-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0917-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0918-1930" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 18일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0918-1930" placeholder="A-13"><button onclick="confirmSeat('0918-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0918-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0918-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0919-1400" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1400" placeholder="A-13"><button onclick="confirmSeat('0919-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1400')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0919-1900" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1900" placeholder="A-13"><button onclick="confirmSeat('0919-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1900')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0920-1400" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 20일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0920-1400" placeholder="A-13"><button onclick="confirmSeat('0920-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0920-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0920-1400')" title="복사">🎤</button></div></div>
 <div class="no-show" data-noshow="1">9월 21일 (월) — 공연 없음</div>
-<div class="row osel-byunheesang" data-sid="0922-1930" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 22일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0922-1930" placeholder="C-D-10"><button onclick="confirmSeat('0922-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0922-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0922-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-gimjion" data-sid="0923-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 23일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0923-1930" placeholder="C-D-10"><button onclick="confirmSeat('0923-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0923-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0923-1930')" title="복사">🎤</button></div></div>
-<div class="row osel-parkgyuwon" data-sid="0924-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 24일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0924-1930" placeholder="C-D-10"><button onclick="confirmSeat('0924-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0924-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0924-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0922-1930" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 22일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0922-1930" placeholder="A-13"><button onclick="confirmSeat('0922-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0922-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0922-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0923-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 23일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0923-1930" placeholder="A-13"><button onclick="confirmSeat('0923-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0923-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0923-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0924-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 24일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0924-1930" placeholder="A-13"><button onclick="confirmSeat('0924-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0924-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0924-1930')" title="복사">🎤</button></div></div>
 </div>
 
 <div class="settle-title">오셀로와 이아고 정산</div>
@@ -314,8 +316,7 @@ body{font-family:'Noto Sans KR',sans-serif;
 
 <!-- 좌석 배치도 -->
 <div class="seat-map-section">
-  <div class="seat-map-title">SEAT GUIDE · 내 좌석 정산</div>
-  <div style="text-align:center;font-size:10.5px;color:#dcd0c4;margin-bottom:6px;">좌석 입력 형식: <b style="color:#e2c26b;">구역-열-번호</b> (예: L-A-4, C-D-10, R-K-15)</div>
+  <div class="seat-map-title">내 좌석 정산</div>
   <div id="seatMapInner"></div>
   <div class="seat-legend" id="seatLegend"><span style="font-size:11px;color:#8a7d6c;">좌석을 입력하면 여기에 표시됩니다</span></div>
 </div>
@@ -439,8 +440,6 @@ function updateCounting(){
 function renderZoneBlock(zoneKey){
   const zone=ZONES[zoneKey];
   const block=document.createElement('div'); block.className='zone-block';
-  const lbl=document.createElement('div'); lbl.className='zone-label'; lbl.textContent=zone.label;
-  block.appendChild(lbl);
   const rowsWrap=document.createElement('div'); rowsWrap.className='zone-rows';
   zone.rows.forEach((rowArr, idx)=>{
     const rowEl=document.createElement('div'); rowEl.className='seat-row';
@@ -473,7 +472,36 @@ function buildMap(){
   ['L','C','R'].forEach(zoneKey=>{ rowFlex.appendChild(renderZoneBlock(zoneKey)); });
   scrollWrap.appendChild(rowFlex);
   wrap.appendChild(scrollWrap);
+  fitSeatMap();
 }
+
+function fitSeatMap(){
+  const section=document.querySelector('.seat-map-section');
+  const scrollWrap=document.querySelector('.zone-scroll');
+  const zoneRow=document.querySelector('.zone-row');
+  if(!section||!scrollWrap||!zoneRow)return;
+
+  // 실측을 위해 일단 원상태로 리셋
+  zoneRow.style.transform='none';
+  scrollWrap.style.height='';
+
+  const sectionStyle=getComputedStyle(section);
+  const padL=parseFloat(sectionStyle.paddingLeft)||0;
+  const padR=parseFloat(sectionStyle.paddingRight)||0;
+  const availWidth=section.clientWidth-padL-padR;
+
+  const naturalWidth=zoneRow.scrollWidth;
+  const naturalHeight=zoneRow.scrollHeight;
+  if(naturalWidth>availWidth && naturalWidth>0){
+    const scale=availWidth/naturalWidth;
+    zoneRow.style.transformOrigin='top center';
+    zoneRow.style.transform='scale('+scale+')';
+    scrollWrap.style.height=Math.ceil(naturalHeight*scale)+'px';
+  }
+}
+window.addEventListener('resize', ()=>{ if(document.querySelector('.seat-map-section')) fitSeatMap(); });
+window.addEventListener('load', fitSeatMap);
+if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitSeatMap).catch(()=>{}); }
 
 function updateMap(){
   document.querySelectorAll('.seat').forEach(el=>{ el.className=el.className.replace(/\bmk\d\b/g,'').trim(); });
@@ -487,7 +515,7 @@ function updateMap(){
   });
   Object.keys(cnt).forEach(key=>{
     const el=document.getElementById('S-'+key);
-    if(el){el.classList.add('mk'+Math.min(cnt[key],5));el.title=key+' ('+cnt[key]+'회)';}
+    if(el){el.classList.add('mk'+Math.min(cnt[key],5));el.title=seatDisplay(key)+' ('+cnt[key]+'회)';}
   });
   updateLegend(cnt);
 }
@@ -504,14 +532,19 @@ function updateLegend(cnt){
 }
 
 function parseSeat(val){
-  const m=val.trim().toUpperCase().replace(/\s+/g,'').match(/^(L|C|R)-([A-L])-(\d{1,2})$/);
+  const m=val.trim().toUpperCase().replace(/\s+/g,'').match(/^([A-L])-(\d{1,2})$/);
   if(!m)return null;
-  const zoneKey=m[1], rowLetter=m[2], seatNum=parseInt(m[3]);
-  const zone=ZONES[zoneKey]; if(!zone)return null;
+  const rowLetter=m[1], seatNum=parseInt(m[2]);
   const rowIdx=ROWLETTERS.indexOf(rowLetter); if(rowIdx<0)return null;
-  const rowArr=zone.rows[rowIdx]; if(!rowArr)return null;
-  const found=rowArr.some(s=>s.n===seatNum); if(!found)return null;
-  return zoneKey+'-'+rowLetter+'-'+seatNum;
+  for(const zoneKey of ['L','C','R']){
+    const rowArr=ZONES[zoneKey].rows[rowIdx];
+    if(rowArr && rowArr.some(s=>s.n===seatNum)) return zoneKey+'-'+rowLetter+'-'+seatNum;
+  }
+  return null;
+}
+function seatDisplay(key){
+  // 내부 저장은 zone-row-num, 화면 표시는 row-num만 (구역 문자는 숨김)
+  const parts=key.split('-'); return parts[1]+'-'+parts[2];
 }
 function copyText(text, btn){
   const onSuccess=()=>{
@@ -588,8 +621,9 @@ function renderTags(sid){
   if(btn) btn.style.display=seats.length?'none':'';
   seats.forEach(key=>{
     const c=COLORS[Math.min((cnt[key]||1),5)-1];
-    const tag=document.createElement('span');tag.className='seat-tag';tag.style.background=c.bg;
-    tag.innerHTML=key+' <span style="font-size:7px;opacity:0.8">×</span>';
+    const tag=document.createElement('span');tag.className='seat-tag';
+    tag.style.borderColor=c.ring;
+    tag.innerHTML=seatDisplay(key)+' <span style="font-size:7px;opacity:0.8">×</span>';
     tag.onclick=()=>removeSeat(sid,key);el.appendChild(tag);
   });
 }
