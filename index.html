@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오셀로와 이아고 출연 일정 - 전체 배우</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Song+Myung&family=Nanum+Myeongjo:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR',sans-serif;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 15%, rgba(210,50,55,0.32), transparent 60%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(150,30,30,0.3), transparent 65%),
+    linear-gradient(180deg,#4a2429 0%,#5c262a 20%,#682228 45%,#4a1e22 70%,#2e1417 100%);
+  background-color:#3a1c1f;
+  min-height:100vh;padding:0 0 50px;color:#f3ebe1;}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:40px 16px 26px;text-align:center;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 10%,rgba(210,60,50,0.28),transparent 45%),
+             radial-gradient(circle at 82% 75%,rgba(0,0,0,0.35),transparent 55%);
+  pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.presents{font-size:10px;letter-spacing:5px;color:#c9a24a;font-weight:700;margin-bottom:14px;}
+.brush-title{font-family:'Nanum Myeongjo',serif;font-weight:800;font-size:34px;line-height:0.95;
+  color:#e2c26b;letter-spacing:-1px;text-shadow:0 2px 18px rgba(200,40,40,0.45);
+  transform:skewX(-3deg);margin-bottom:8px;}
+.title-en{font-family:'Nanum Myeongjo',serif;font-style:italic;font-weight:400;font-size:12px;
+  letter-spacing:1px;color:#c9b8a8;margin-bottom:16px;}
+.title-kr{font-family:'Song Myung',serif;font-size:34px;color:#ecd191;letter-spacing:6px;margin-bottom:4px;
+  text-shadow:0 2px 16px rgba(0,0,0,0.5);}
+.title-sub{font-size:11px;color:#b8a48f;letter-spacing:2px;margin-bottom:14px;}
+.hero-meta{font-size:11.5px;color:#dcd0c4;letter-spacing:0.5px;margin-bottom:14px;line-height:1.9;}
+.hero-meta b{color:#e2c26b;font-weight:700;}
+.ticket-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.ticket-btn{display:inline-block;padding:6px 14px;background:rgba(20,10,10,0.4);
+  border:1px solid rgba(226,194,107,0.45);border-radius:20px;font-size:11px;font-weight:700;
+  color:#e2c26b;text-decoration:none;letter-spacing:0.5px;}
+.info-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.info-btn{display:inline-block;padding:5px 12px;background:rgba(255,255,255,0.06);
+  border:1px solid rgba(236,226,216,0.2);border-radius:20px;font-size:10.5px;font-weight:500;
+  color:#dcd0c4;text-decoration:none;}
+.notice-badge{display:block;max-width:640px;margin:0 auto 14px;font-size:10.5px;color:#e2c26b;
+  background:rgba(226,194,107,0.08);border:1px dashed rgba(226,194,107,0.35);border-radius:10px;
+  padding:6px 10px;line-height:1.6;}
+
+/* ---------- content wrap ---------- */
+.content{max-width:720px;margin:0 auto;padding:16px 10px 0;}
+.section-title{text-align:center;font-size:17px;font-weight:700;color:#ecd191;margin:20px 0 10px;
+  letter-spacing:3px;font-family:'Song Myung',serif;}
+.section-title .en{display:block;font-family:'Noto Sans KR',sans-serif;font-size:9px;
+  letter-spacing:3px;color:#b8a48f;font-weight:500;margin-top:2px;}
+
+/* ---------- pin bar ---------- */
+.pin-bar{max-width:720px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;
+  gap:8px;flex-wrap:wrap;min-height:26px;padding:0 10px;}
+.pin-btn{padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;
+  border:2px solid transparent;font-family:'Noto Sans KR',sans-serif;transition:all 0.15s;}
+.pin-btn-set{background:#a9202c;color:#fff;border-color:#a9202c;}
+.pin-btn-set:hover{background:#8c1522;border-color:#8c1522;}
+.pin-btn-clear{background:rgba(255,255,255,0.08);border-color:rgba(226,194,107,0.35)!important;color:#e2c26b;}
+.pin-status{font-size:11px;font-weight:700;color:#e2c26b;display:flex;align-items:center;gap:5px;}
+.pin-dot{width:8px;height:8px;border-radius:50%;background:#c9202c;display:inline-block;animation:pblink 1.4s infinite;}
+@keyframes pblink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.fb2.pinned{outline:3px solid #e2c26b;outline-offset:1px;}
+.pin-hint{font-size:11px;color:#b8a48f;}
+
+/* ---------- filters ---------- */
+.filter-section{max-width:720px;margin:0 auto 4px;padding:0 10px;}
+.filter-group{margin-bottom:8px;}
+.fgl{font-size:10.5px;font-weight:700;color:#c9a24a;text-align:center;letter-spacing:2px;margin-bottom:4px;}
+.filter-row{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;}
+.fb2{padding:5px 11px;border-radius:18px;font-size:11px;font-weight:700;cursor:pointer;
+  border:2px solid transparent;transition:all 0.12s;font-family:'Noto Sans KR',sans-serif;white-space:nowrap;}
+.btn-all{background:rgba(255,255,255,0.07);color:#ece2d8;border-color:rgba(236,226,216,0.25);}
+.btn-all.active{background:#a9202c;color:#fff;border-color:#a9202c;}
+
+.count-info{text-align:center;font-size:12px;color:#dcd0c4;margin-bottom:10px;font-weight:500;}
+
+/* ---------- table (grid, compact) ---------- */
+.table-wrap{max-width:720px;margin:0 auto;background:rgba(60,32,36,0.55);border-radius:16px;
+  overflow:hidden;border:1px solid rgba(226,194,107,0.18);}
+.table-header{display:grid;grid-template-columns:56px 26px 40px 1fr 1fr 52px 18px;
+  background:rgba(226,194,107,0.1);padding:7px 4px;gap:2px;align-items:center;}
+.th{font-size:10.5px;font-weight:700;color:#e2c26b;letter-spacing:0.3px;}
+.no-show{padding:5px 8px;background:rgba(0,0,0,0.2);font-size:10px;color:#a89685;text-align:center;
+  border-top:1px solid rgba(226,194,107,0.1);font-style:italic;}
+.row{display:grid;grid-template-columns:56px 26px 40px 1fr 1fr 52px 18px;
+  padding:5px 4px;gap:2px;border-top:1px solid rgba(226,194,107,0.1);align-items:start;}
+.row.hidden{display:none;}
+.cell{font-size:10px;color:#ece2d8;text-align:center;}
+.cell.date{font-weight:700;font-size:10.5px;text-align:left;line-height:1.3;}
+.cell.day{font-weight:700;font-size:10.5px;white-space:nowrap;}
+.cell.day.day-sat{color:#5fa8e0;}
+.cell.day.day-sun{color:#e0625f;}
+.cell.day.day-wkd{color:#b8a48f;}
+.cell.time{font-size:9.5px;color:#b8a48f;}
+.cell.actor-cell{font-size:10.5px;font-weight:600;line-height:1.25;padding-top:1px;color:#ece2d8;}
+.role-pill{font-size:9.5px;font-weight:700;padding:1px 4px;border-radius:5px;display:inline-block;line-height:1.35;white-space:nowrap;}
+.event-tag{display:block;font-size:7.5px;font-weight:700;color:#e2c26b;opacity:0.9;margin-top:1px;white-space:nowrap;text-decoration:none;}
+.event-tag:hover{opacity:1;text-decoration:underline;}
+.fb{display:block;background:#a9202c;color:white;font-size:6px;font-weight:700;
+  padding:0 3px;border-radius:5px;margin:1px auto 0;width:fit-content;line-height:1.4;}
+.fb.fb-last{background:#5a5048;}
+.copy-btn{background:none;border:none;cursor:pointer;font-size:13px;padding:1px;display:flex;
+  align-items:center;justify-content:center;width:100%;transition:all 0.15s;margin-top:1px;}
+.copy-btn.copied{filter:brightness(1.3);}
+.cell.copy-cell{display:flex;align-items:center;justify-content:center;}
+.seat-cell{display:flex;flex-direction:column;gap:2px;}
+.seat-input-row{display:flex;gap:2px;}
+.seat-input{flex:1;min-width:0;font-size:8.5px;padding:2px 3px;border:1px solid rgba(226,194,107,0.3);
+  border-radius:5px;background:rgba(255,255,255,0.06);color:#ece2d8;font-family:'Noto Sans KR',sans-serif;
+  text-align:center;}
+.seat-input::placeholder{color:#8a7a6c;}
+.seat-input:focus{outline:none;border-color:#e2c26b;background:rgba(255,255,255,0.12);}
+.seat-ok-btn{flex-shrink:0;background:#a9202c;color:white;border:none;border-radius:5px;
+  font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;}
+.seat-tags{display:flex;flex-wrap:wrap;gap:1px;justify-content:center;}
+.seat-tag{font-size:9px;font-weight:700;padding:2px 5px;border-radius:6px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:2px;color:white;}
+
+/* ---------- counting ---------- */
+.settle-title{text-align:center;font-size:15px;font-weight:700;color:#ecd191;letter-spacing:2px;
+  margin:22px 0 8px;font-family:'Song Myung',serif;}
+.counting-section{max-width:720px;margin:0 auto;padding:0 10px;}
+.cgl{font-size:10.5px;font-weight:700;color:#c9a24a;text-align:center;letter-spacing:2px;margin:6px 0 3px;}
+.counting-box{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-bottom:2px;}
+.counting-box.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-width:400px;margin:0 auto 2px;}
+.count-card{flex:1;min-width:60px;max-width:95px;background:rgba(255,255,255,0.06);border-radius:10px;
+  padding:6px 3px;text-align:center;border:1px solid rgba(226,194,107,0.16);transition:opacity 0.15s,filter 0.15s;}
+.counting-box.grid3 .count-card{flex:none;min-width:0;max-width:none;width:auto;}
+.count-card.dim{opacity:0.3;filter:grayscale(70%);}
+.count-card .cnt-name{font-size:11px;font-weight:700;margin-bottom:2px;}
+.count-card .cnt-num{font-size:19px;font-weight:700;line-height:1;}
+.count-card .cnt-label{font-size:8px;color:#a89685;}
+.cnt-total-box{display:flex;justify-content:center;margin:6px 0;}
+.cnt-total-card{background:rgba(226,194,107,0.1);border-radius:14px;padding:7px 26px;text-align:center;
+  border:1px solid rgba(226,194,107,0.35);}
+.cnt-total-card .cnt-name{font-size:11px;font-weight:700;color:#e2c26b;margin-bottom:1px;}
+.cnt-total-card .cnt-num{font-size:27px;font-weight:700;color:#e2c26b;line-height:1;}
+.cnt-total-card .cnt-label{font-size:10px;color:#b8a48f;}
+.cnt-total-of{font-size:0.55em;font-weight:500;color:#8a7a6c;margin-left:1px;}
+
+/* ---------- seat map ---------- */
+.seat-map-section{max-width:720px;margin:14px auto 0;background:rgba(60,32,36,0.55);
+  border-radius:16px;padding:14px 8px 16px;border:1px solid rgba(226,194,107,0.18);}
+.seat-map-title{text-align:center;font-size:13px;font-weight:700;color:#e2c26b;margin-bottom:8px;
+  letter-spacing:1px;}
+.stage-box-mini{background:#0f0808;color:#ecd191;border-radius:4px;text-align:center;font-size:10.5px;
+  font-weight:700;padding:6px 0;letter-spacing:5px;margin:0 auto 14px;width:80%;
+  border:1px solid rgba(226,194,107,0.4);}
+.zone-scroll{overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+.zone-row{display:inline-flex;gap:10px;padding:0 6px;margin:0 auto;justify-content:center;min-width:100%;align-items:flex-start;}
+.zone-block{flex-shrink:0;}
+.zone-label{font-size:9.5px;font-weight:700;color:#c9a24a;text-align:center;margin-bottom:5px;
+  letter-spacing:1px;white-space:nowrap;}
+.seat-map-section{--seat-size:16px;--seat-gap:1.5px;}
+.zone-rows{display:flex;flex-direction:column;gap:var(--seat-gap);}
+.seat-row{display:flex;align-items:center;gap:4px;}
+.row-label{font-size:8px;font-weight:700;color:#c9a24a;flex-shrink:0;text-align:center;width:13px;}
+.seat-grid{display:grid;grid-auto-flow:column;gap:var(--seat-gap);}
+.seat{width:var(--seat-size);height:var(--seat-size);font-size:8px;border-radius:3px;font-weight:800;display:flex;
+  align-items:center;justify-content:center;
+  background:#f0e6d2;color:#4a3a20;border:1px solid #d4c5a3;}
+.seat.mk1{outline:2px solid #ffffff;outline-offset:-1px;}
+.seat.mk2{outline:2px solid #2f8fd6;outline-offset:-1px;}
+.seat.mk3{outline:2px solid #d67a1f;outline-offset:-1px;}
+.seat.mk4{outline:2px solid #8a3fd6;outline-offset:-1px;}
+.seat.mk5{outline:2px solid #1f9a4e;outline-offset:-1px;}
+.seat-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px;font-size:11px;}
+.seat-legend-item{display:flex;align-items:center;gap:4px;color:#dcd0c4;}
+.seat-legend-dot{width:11px;height:11px;border-radius:2px;display:inline-block;border:2px solid;background:rgba(255,255,255,0.06);}
+
+.footer{text-align:center;font-size:10px;color:#a89685;margin-top:16px;line-height:1.8;padding:0 20px;}
+.footer b{color:#e2c26b;}
+
+@media(min-width:768px){
+  .brush-title{font-size:52px;}
+  .title-kr{font-size:44px;letter-spacing:8px;}
+  .fb2{font-size:12px;padding:6px 15px;}
+  .fgl,.cgl{font-size:12px;}
+  .row{grid-template-columns:82px 34px 52px 1fr 1fr 88px 24px;padding:8px 10px;gap:4px;}
+  .table-header{grid-template-columns:82px 34px 52px 1fr 1fr 88px 24px;padding:9px 10px;}
+  .th{font-size:13px;}
+  .cell{font-size:13px;}.cell.date{font-size:13.5px;}.cell.time{font-size:12px;}
+  .role-pill{font-size:13px;padding:2px 7px;}
+  .cell.actor-cell{font-size:13.5px;}
+  .fb{font-size:8px;padding:1px 4px;}
+  .seat-input{font-size:10.5px;padding:3px 5px;}
+  .count-card .cnt-name{font-size:11.5px;}.count-card .cnt-num{font-size:24px;}
+  .cnt-total-card .cnt-num{font-size:34px;}
+  .seat-map-section{--seat-size:20px;}
+  .seat{font-size:10px;}
+  .row-label{width:16px;font-size:10px;}
+  .zone-label{font-size:11.5px;}
+  .zone-row{gap:22px;}
+}
+
+.btn-gimjion{background:#3a2224;color:#f0c9b8;border-color:#7a4a3a;}.btn-gimjion.active{background:#a94a35;color:#fff;border-color:#a94a35;}
+.badge-gimjion{background:#3a2224;color:#f0c9b8;border:1px solid #7a4a3a;}
+.row.osel-gimjion{background:rgba(169,74,53,0.13);border-left:3px solid #a94a35;}
+.btn-parkgyuwon{background:#3a2c1e;color:#f0d3ab;border-color:#8a6a3a;}.btn-parkgyuwon.active{background:#b06a2a;color:#fff;border-color:#b06a2a;}
+.badge-parkgyuwon{background:#3a2c1e;color:#f0d3ab;border:1px solid #8a6a3a;}
+.row.osel-parkgyuwon{background:rgba(176,106,42,0.13);border-left:3px solid #b06a2a;}
+.btn-byunheesang{background:#3a331e;color:#f0deab;border-color:#8a7c3a;}.btn-byunheesang.active{background:#b0912a;color:#fff;border-color:#b0912a;}
+.badge-byunheesang{background:#3a331e;color:#f0deab;border:1px solid #8a7c3a;}
+.row.osel-byunheesang{background:rgba(176,145,42,0.13);border-left:3px solid #b0912a;}
+.btn-gwakminsu{background:#1e2f33;color:#a9e0e8;border-color:#3a7a86;}.btn-gwakminsu.active{background:#1f7f8c;color:#fff;border-color:#1f7f8c;}
+.badge-gwakminsu{background:#1e2f33;color:#a9e0e8;border:1px solid #3a7a86;}
+.btn-gimkyungrok{background:#1e2a33;color:#a9cfe8;border-color:#3a6486;}.btn-gimkyungrok.active{background:#1f5f8c;color:#fff;border-color:#1f5f8c;}
+.badge-gimkyungrok{background:#1e2a33;color:#a9cfe8;border:1px solid #3a6486;}
+.btn-yangjiwon{background:#241e33;color:#c9b8e8;border-color:#5a3a86;}.btn-yangjiwon.active{background:#5a2f8c;color:#fff;border-color:#5a2f8c;}
+.badge-yangjiwon{background:#241e33;color:#c9b8e8;border:1px solid #5a3a86;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="presents">MUSICAL</div>
+    <div class="brush-title">OTHELLO AND IAGO</div>
+    <div class="title-en">원작 윌리엄 셰익스피어 『오셀로』</div>
+    <div class="title-kr">오셀로와 이아고</div>
+    <div class="hero-meta">
+      <b>2026.9.8(TUE) – 11.22(SUN)</b><br>대학로 자유극장
+    </div>
+    <div class="ticket-row">
+      <a href="https://ticket.yes24.com/" target="_blank" class="ticket-btn">🎟 예스24</a>
+      <a href="https://www.ticketlink.co.kr/" target="_blank" class="ticket-btn">🎟 티켓링크</a>
+      <a href="https://tickets.interpark.com/" target="_blank" class="ticket-btn">🎟 NOL티켓</a>
+    </div>
+    <div class="info-row">
+      <a href="#" target="_blank" class="info-btn">🪑 좌석 배치도</a>
+      <a href="#" target="_blank" class="info-btn">🔍 시야 확인</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<div class="notice-badge">⚠️ 티켓 예매 링크·좌석 배치도·전체 회차 캐스팅 일정은 아직 예시입니다. 실제 일정표/공지 주시면 반영해드릴게요.</div>
+
+<div class="section-title">출연 일정<span class="en">CAST SCHEDULE</span></div>
+
+<div class="pin-bar" id="pinBar">
+  <span class="pin-hint">배우를 선택하고 📌 고정하면 다음 접속 때도 유지돼요</span>
+</div>
+
+<div class="filter-section">
+  <div class="filter-group">
+    <div class="fgl">전체</div>
+    <div class="filter-row">
+      <button class="fb2 btn-all active" onclick="resetFilter()">전체 보기</button>
+    </div>
+  </div>
+<div class="filter-group">
+    <div class="fgl">오셀로</div>
+    <div class="filter-row">
+      <button class="fb2 btn-gimjion" onclick="toggleFilter('osel','gimjion')">김지온</button><button class="fb2 btn-parkgyuwon" onclick="toggleFilter('osel','parkgyuwon')">박규원</button><button class="fb2 btn-byunheesang" onclick="toggleFilter('osel','byunheesang')">변희상</button>
+    </div>
+  </div>
+<div class="filter-group">
+    <div class="fgl">이아고</div>
+    <div class="filter-row">
+      <button class="fb2 btn-gwakminsu" onclick="toggleFilter('iago','gwakminsu')">곽민수</button><button class="fb2 btn-gimkyungrok" onclick="toggleFilter('iago','gimkyungrok')">김경록</button><button class="fb2 btn-yangjiwon" onclick="toggleFilter('iago','yangjiwon')">양지원</button>
+    </div>
+  </div>
+</div>
+
+<div class="count-info" id="countInfo">전체 0회</div>
+
+<div class="table-wrap">
+<div class="table-header"><div class="th" style="text-align:left;">날짜</div><div class="th" style="text-align:center;">요일</div><div class="th" style="text-align:center;">시간</div><div class="th" style="text-align:center;">오셀로</div><div class="th" style="text-align:center;">이아고</div><div class="th" style="text-align:center;">좌석</div><div class="th" style="text-align:center;"></div></div>
+<div class="row osel-gimjion" data-sid="0908-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 8일<a class="event-tag" href="#" target="_blank" rel="noopener">첫공무대인사</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온<span class="fb">첫</span></span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0908-1930" placeholder="C-D-10"><button onclick="confirmSeat('0908-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0908-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0908-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0909-1930" data-osel="parkgyuwon" data-iago="gimkyungrok"><div class="cell date">9월 9일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0909-1930" placeholder="C-D-10"><button onclick="confirmSeat('0909-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0909-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0909-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0910-1930" data-osel="byunheesang" data-iago="yangjiwon"><div class="cell date">9월 10일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0910-1930" placeholder="C-D-10"><button onclick="confirmSeat('0910-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0910-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0910-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0911-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 11일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0911-1930" placeholder="C-D-10"><button onclick="confirmSeat('0911-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0911-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0911-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0912-1400" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1400" placeholder="C-D-10"><button onclick="confirmSeat('0912-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1400')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0912-1900" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 12일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0912-1900" placeholder="C-D-10"><button onclick="confirmSeat('0912-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0912-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0912-1900')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0913-1400" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 13일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0913-1400" placeholder="C-D-10"><button onclick="confirmSeat('0913-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0913-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0913-1400')" title="복사">🎤</button></div></div>
+<div class="no-show" data-noshow="1">9월 14일 (월) — 공연 없음</div>
+<div class="row osel-parkgyuwon" data-sid="0915-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 15일</div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0915-1930" placeholder="C-D-10"><button onclick="confirmSeat('0915-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0915-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0915-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0916-1930" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 16일</div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0916-1930" placeholder="C-D-10"><button onclick="confirmSeat('0916-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0916-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0916-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0917-1930" data-osel="gimjion" data-iago="gwakminsu"><div class="cell date">9월 17일</div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0917-1930" placeholder="C-D-10"><button onclick="confirmSeat('0917-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0917-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0917-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0918-1930" data-osel="parkgyuwon" data-iago="yangjiwon"><div class="cell date">9월 18일</div><div class="cell day day-wkd">금</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0918-1930" placeholder="C-D-10"><button onclick="confirmSeat('0918-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0918-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0918-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-byunheesang" data-sid="0919-1400" data-osel="byunheesang" data-iago="gimkyungrok"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1400" placeholder="C-D-10"><button onclick="confirmSeat('0919-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1400')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0919-1900" data-osel="gimjion" data-iago="yangjiwon"><div class="cell date">9월 19일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-yangjiwon">양지원</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0919-1900" placeholder="C-D-10"><button onclick="confirmSeat('0919-1900')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0919-1900"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0919-1900')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0920-1400" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 20일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-sun">일</div><div class="cell time">14:00</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0920-1400" placeholder="C-D-10"><button onclick="confirmSeat('0920-1400')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0920-1400"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0920-1400')" title="복사">🎤</button></div></div>
+<div class="no-show" data-noshow="1">9월 21일 (월) — 공연 없음</div>
+<div class="row osel-byunheesang" data-sid="0922-1930" data-osel="byunheesang" data-iago="gwakminsu"><div class="cell date">9월 22일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">화</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-byunheesang">변희상</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0922-1930" placeholder="C-D-10"><button onclick="confirmSeat('0922-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0922-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0922-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-gimjion" data-sid="0923-1930" data-osel="gimjion" data-iago="gimkyungrok"><div class="cell date">9월 23일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">수</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-gimjion">김지온</span></div><div class="cell"><span class="role-pill badge-gimkyungrok">김경록</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0923-1930" placeholder="C-D-10"><button onclick="confirmSeat('0923-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0923-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0923-1930')" title="복사">🎤</button></div></div>
+<div class="row osel-parkgyuwon" data-sid="0924-1930" data-osel="parkgyuwon" data-iago="gwakminsu"><div class="cell date">9월 24일<a class="event-tag" href="#" target="_blank" rel="noopener">커튼콜위크</a></div><div class="cell day day-wkd">목</div><div class="cell time">19:30</div><div class="cell"><span class="role-pill badge-parkgyuwon">박규원</span></div><div class="cell"><span class="role-pill badge-gwakminsu">곽민수</span></div><div class="cell seat-cell"><div class="seat-input-row"><input class="seat-input" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-0924-1930" placeholder="C-D-10"><button onclick="confirmSeat('0924-1930')" class="seat-ok-btn">✓</button></div><div class="seat-tags" id="tags-0924-1930"></div></div><div class="cell copy-cell"><button class="copy-btn" onclick="copyCast('0924-1930')" title="복사">🎤</button></div></div>
+</div>
+
+<div class="settle-title">오셀로와 이아고 정산</div>
+<div class="counting-section">
+  <div class="cgl">오셀로</div>
+  <div class="counting-box grid3">
+    <div class="count-card"><div class="cnt-name" style="color:#a94a35;">김지온</div><div class="cnt-num" style="color:#a94a35;"><span id="cnt-gimjion">0</span><span id="tot-gimjion" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#b06a2a;">박규원</div><div class="cnt-num" style="color:#b06a2a;"><span id="cnt-parkgyuwon">0</span><span id="tot-parkgyuwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#b0912a;">변희상</div><div class="cnt-num" style="color:#b0912a;"><span id="cnt-byunheesang">0</span><span id="tot-byunheesang" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
+  </div>
+<div class="cgl">이아고</div>
+  <div class="counting-box grid3">
+    <div class="count-card"><div class="cnt-name" style="color:#1f7f8c;">곽민수</div><div class="cnt-num" style="color:#1f7f8c;"><span id="cnt-gwakminsu">0</span><span id="tot-gwakminsu" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#1f5f8c;">김경록</div><div class="cnt-num" style="color:#1f5f8c;"><span id="cnt-gimkyungrok">0</span><span id="tot-gimkyungrok" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#5a2f8c;">양지원</div><div class="cnt-num" style="color:#5a2f8c;"><span id="cnt-yangjiwon">0</span><span id="tot-yangjiwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
+  </div>
+  <div class="cnt-total-box">
+    <div class="cnt-total-card">
+      <div class="cnt-name">합계</div>
+      <div class="cnt-num"><span id="cnt-total">0</span><span id="tot-total" class="cnt-total-of">/0</span></div>
+      <div class="cnt-label">회</div>
+    </div>
+  </div>
+</div>
+
+<!-- 좌석 배치도 -->
+<div class="seat-map-section">
+  <div class="seat-map-title">SEAT GUIDE · 내 좌석 정산</div>
+  <div style="text-align:center;font-size:10.5px;color:#dcd0c4;margin-bottom:6px;">좌석 입력 형식: <b style="color:#e2c26b;">구역-열-번호</b> (예: L-A-4, C-D-10, R-K-15)</div>
+  <div id="seatMapInner"></div>
+  <div class="seat-legend" id="seatLegend"><span style="font-size:11px;color:#8a7d6c;">좌석을 입력하면 여기에 표시됩니다</span></div>
+</div>
+
+
+<div style="max-width:720px;margin:16px auto 4px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;">
+  <button onclick="exportData()" style="padding:6px 16px;background:rgba(255,255,255,0.6);border:1px solid rgba(60,55,48,0.2);border-radius:20px;font-size:11px;font-weight:700;color:#7a1421;cursor:pointer;font-family:inherit;">💾 내 데이터 저장</button>
+  <label style="padding:6px 16px;background:rgba(255,255,255,0.6);border:1px solid rgba(60,55,48,0.2);border-radius:20px;font-size:11px;font-weight:700;color:#7a1421;cursor:pointer;">
+    📂 데이터 불러오기<input type="file" accept=".json" onchange="importData(event)" style="display:none;">
+  </label>
+</div>
+
+<div class="footer">
+  <b>오셀로와 이아고</b> 팬메이드 비공식 관람 기록 사이트<br>
+  데이터는 브라우저(localStorage)에만 저장되며 서버로 전송되지 않습니다.
+</div>
+
+</div>
+
+<script>
+
+/* ================= SEAT MAP CONFIG (2026 오셀로와 이아고 시야표 기반) ================= */
+const ZONES = {"L": {"label": "좌측", "slots": 6, "rows": [[{"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "snol", "slot": 0}, {"n": 2, "cat": "snol", "slot": 1}, {"n": 3, "cat": "snol", "slot": 2}, {"n": 4, "cat": "snol", "slot": 3}, {"n": 5, "cat": "snol", "slot": 4}, {"n": 6, "cat": "snol", "slot": 5}], [{"n": 1, "cat": "snol", "slot": 0}, {"n": 2, "cat": "snol", "slot": 1}, {"n": 3, "cat": "snol", "slot": 2}, {"n": 4, "cat": "snol", "slot": 3}, {"n": 5, "cat": "snol", "slot": 4}, {"n": 6, "cat": "snol", "slot": 5}]]}, "C": {"label": "중앙", "slots": 8, "rows": [[{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "snol", "slot": 1}, {"n": 8, "cat": "snol", "slot": 2}, {"n": 9, "cat": "snol", "slot": 3}, {"n": 10, "cat": "snol", "slot": 4}, {"n": 11, "cat": "stl", "slot": 5}, {"n": 12, "cat": "stl", "slot": 6}, {"n": 13, "cat": "stl", "slot": 7}], [{"n": 7, "cat": "snol", "slot": 0}, {"n": 8, "cat": "snol", "slot": 1}, {"n": 9, "cat": "snol", "slot": 2}, {"n": 10, "cat": "snol", "slot": 3}, {"n": 11, "cat": "stl", "slot": 4}, {"n": 12, "cat": "stl", "slot": 5}, {"n": 13, "cat": "stl", "slot": 6}, {"n": 14, "cat": "stl", "slot": 7}]]}, "R": {"label": "우측", "slots": 8, "rows": [[{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}, {"n": 21, "cat": "rtl", "slot": 7}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "stl", "slot": 0}, {"n": 15, "cat": "stl", "slot": 1}, {"n": 16, "cat": "stl", "slot": 2}, {"n": 17, "cat": "stl", "slot": 3}, {"n": 18, "cat": "stl", "slot": 4}, {"n": 19, "cat": "stl", "slot": 5}, {"n": 20, "cat": "stl", "slot": 6}], [{"n": 15, "cat": "stl", "slot": 1}, {"n": 16, "cat": "stl", "slot": 2}, {"n": 17, "cat": "stl", "slot": 3}, {"n": 18, "cat": "stl", "slot": 4}, {"n": 19, "cat": "stl", "slot": 5}, {"n": 20, "cat": "stl", "slot": 6}]]}};
+const ROWLETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+const COLORS=[
+  {ring:'#ffffff',label:'1회'},
+  {ring:'#2f8fd6',label:'2회'},
+  {ring:'#d67a1f',label:'3회'},
+  {ring:'#8a3fd6',label:'4회'},
+  {ring:'#1f9a4e',label:'5회 이상'},
+];
+
+const showSeats=JSON.parse(localStorage.getItem('othelloiago_seats_v1')||'{}');
+let focusedId=null;
+
+/* ================= ROLE CONFIG (배역군을 늘리려면 여기 두 곳만 수정) ================= */
+const ROLE_ATTRS=['osel','iago'];
+const ROLE_KEYS={osel:["gimjion","parkgyuwon","byunheesang"],iago:["gwakminsu","gimkyungrok","yangjiwon"]};
+const ALL_KEYS=["gimjion","parkgyuwon","byunheesang","gwakminsu","gimkyungrok","yangjiwon"];
+const ACTOR={gimjion:"김지온",parkgyuwon:"박규원",byunheesang:"변희상",gwakminsu:"곽민수",gimkyungrok:"김경록",yangjiwon:"양지원"};
+const LABELS={gimjion:"김지온",parkgyuwon:"박규원",byunheesang:"변희상",gwakminsu:"곽민수",gimkyungrok:"김경록",yangjiwon:"양지원"};
+
+const SHOW_INFO={};
+document.querySelectorAll('.row[data-sid]').forEach(r=>{
+  const info={};
+  ROLE_ATTRS.forEach(attr=>{ info[attr]=r.dataset[attr]; });
+  SHOW_INFO[r.dataset.sid]=info;
+});
+
+function matchSel(info){
+  return ROLE_ATTRS.every(attr=> !sel[attr].length || sel[attr].includes(info[attr]));
+}
+
+function exportData(){
+  const rowsData=[];
+  document.querySelectorAll('.row[data-sid]').forEach(r=>{
+    const sid=r.dataset.sid;
+    const dateCell=r.querySelector('.cell.date');
+    const date=[...dateCell.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent.trim()).join('').trim();
+    const day=r.querySelector('.cell.day')?.textContent.trim()||'';
+    const time=r.querySelector('.cell.time')?.textContent.trim()||'';
+    const item={sid,date,day,time,seats:showSeats[sid]||[]};
+    ROLE_ATTRS.forEach(attr=>{ item[attr]=ACTOR[r.dataset[attr]]||r.dataset[attr]; });
+    rowsData.push(item);
+  });
+  const blob=new Blob([JSON.stringify(rowsData,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='오셀로와이아고_내좌석.json';a.click();URL.revokeObjectURL(url);
+}
+function importData(e){
+  const file=e.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    try{
+      const data=JSON.parse(ev.target.result);
+      if(Array.isArray(data)){
+        data.forEach(item=>{ if(item && item.sid){ showSeats[item.sid]=item.seats||[]; } });
+      }else{
+        Object.keys(data).forEach(sid=>{showSeats[sid]=data[sid];});
+      }
+      saveSeats();Object.keys(showSeats).forEach(sid=>renderTags(sid));updateMap();updateCounting();
+      alert('데이터를 불러왔어요! 🎉');
+    }catch(e){alert('파일을 읽을 수 없어요 ㅠㅠ');}
+  };
+  reader.readAsText(file);e.target.value='';
+}
+function saveSeats(){localStorage.setItem('othelloiago_seats_v1',JSON.stringify(showSeats));}
+
+/* ================= COUNTING ================= */
+function updateCounting(){
+  const cnt={}, totCnt={};
+  ALL_KEYS.forEach(k=>{cnt[k]=0;totCnt[k]=0;});
+  let total=0, totTotal=0;
+  const isAll=isAllEmpty(sel);
+
+  document.querySelectorAll('.row[data-sid]').forEach(r=>{
+    const sid=r.dataset.sid; if(!SHOW_INFO[sid])return;
+    const info=SHOW_INFO[sid];
+    if(!isAll && !matchSel(info))return;
+    ROLE_ATTRS.forEach(attr=>{ totCnt[info[attr]]=(totCnt[info[attr]]||0)+1; });
+    totTotal++;
+  });
+
+  Object.keys(showSeats).forEach(sid=>{
+    if((showSeats[sid]||[]).length===0||!SHOW_INFO[sid])return;
+    const info=SHOW_INFO[sid];
+    if(!isAll && !matchSel(info))return;
+    ROLE_ATTRS.forEach(attr=>{ cnt[info[attr]]=(cnt[info[attr]]||0)+1; });
+    total++;
+  });
+
+  ALL_KEYS.forEach(k=>{
+    const c=document.getElementById('cnt-'+k); if(c) c.textContent=cnt[k]||0;
+    const t=document.getElementById('tot-'+k); if(t) t.textContent='/'+(totCnt[k]||0);
+  });
+  const totalEl=document.getElementById('cnt-total'); if(totalEl) totalEl.textContent=total;
+  const totTotalEl=document.getElementById('tot-total'); if(totTotalEl) totTotalEl.textContent='/'+totTotal;
+}
+
+/* ================= SEAT MAP RENDER ================= */
+function renderZoneBlock(zoneKey){
+  const zone=ZONES[zoneKey];
+  const block=document.createElement('div'); block.className='zone-block';
+  const lbl=document.createElement('div'); lbl.className='zone-label'; lbl.textContent=zone.label;
+  block.appendChild(lbl);
+  const rowsWrap=document.createElement('div'); rowsWrap.className='zone-rows';
+  zone.rows.forEach((rowArr, idx)=>{
+    const rowEl=document.createElement('div'); rowEl.className='seat-row';
+    const rl=document.createElement('div'); rl.className='row-label'; rl.textContent=ROWLETTERS[idx];
+    rowEl.appendChild(rl);
+    const grid=document.createElement('div'); grid.className='seat-grid';
+    grid.style.gridTemplateColumns='repeat('+zone.slots+', var(--seat-size))';
+    rowArr.forEach(seat=>{
+      const s=document.createElement('div'); s.className='seat';
+      s.style.gridColumn=(seat.slot+1);
+      const id=zoneKey+'-'+ROWLETTERS[idx]+'-'+seat.n; s.id='S-'+id;
+      s.textContent=seat.n;
+      grid.appendChild(s);
+    });
+    rowEl.appendChild(grid);
+    rowsWrap.appendChild(rowEl);
+  });
+  block.appendChild(rowsWrap);
+  return block;
+}
+
+function buildMap(){
+  const wrap=document.getElementById('seatMapInner');
+  wrap.innerHTML='';
+  const stage=document.createElement('div'); stage.className='stage-box-mini'; stage.textContent='S T A G E';
+  wrap.appendChild(stage);
+
+  const scrollWrap=document.createElement('div'); scrollWrap.className='zone-scroll';
+  const rowFlex=document.createElement('div'); rowFlex.className='zone-row';
+  ['L','C','R'].forEach(zoneKey=>{ rowFlex.appendChild(renderZoneBlock(zoneKey)); });
+  scrollWrap.appendChild(rowFlex);
+  wrap.appendChild(scrollWrap);
+}
+
+function updateMap(){
+  document.querySelectorAll('.seat').forEach(el=>{ el.className=el.className.replace(/\bmk\d\b/g,'').trim(); });
+  const cnt={};
+  const isAll=isAllEmpty(sel);
+  Object.keys(showSeats).forEach(sid=>{
+    if(!(showSeats[sid]||[]).length||!SHOW_INFO[sid])return;
+    const info=SHOW_INFO[sid];
+    if(!isAll && !matchSel(info))return;
+    showSeats[sid].forEach(s=>{cnt[s]=(cnt[s]||0)+1;});
+  });
+  Object.keys(cnt).forEach(key=>{
+    const el=document.getElementById('S-'+key);
+    if(el){el.classList.add('mk'+Math.min(cnt[key],5));el.title=key+' ('+cnt[key]+'회)';}
+  });
+  updateLegend(cnt);
+}
+function updateLegend(cnt){
+  const el=document.getElementById('seatLegend');
+  const max=Math.max(0,...Object.values(cnt));
+  if(max===0){el.innerHTML='<span style="font-size:11px;color:#8a7d6c;">좌석을 입력하면 여기에 표시됩니다</span>';return;}
+  el.innerHTML='';
+  for(let i=1;i<=Math.min(max,5);i++){
+    const c=COLORS[i-1];const item=document.createElement('div');item.className='seat-legend-item';
+    item.innerHTML='<div class="seat-legend-dot" style="border-color:'+c.ring+'"></div>'+c.label;
+    el.appendChild(item);
+  }
+}
+
+function parseSeat(val){
+  const m=val.trim().toUpperCase().replace(/\s+/g,'').match(/^(L|C|R)-([A-L])-(\d{1,2})$/);
+  if(!m)return null;
+  const zoneKey=m[1], rowLetter=m[2], seatNum=parseInt(m[3]);
+  const zone=ZONES[zoneKey]; if(!zone)return null;
+  const rowIdx=ROWLETTERS.indexOf(rowLetter); if(rowIdx<0)return null;
+  const rowArr=zone.rows[rowIdx]; if(!rowArr)return null;
+  const found=rowArr.some(s=>s.n===seatNum); if(!found)return null;
+  return zoneKey+'-'+rowLetter+'-'+seatNum;
+}
+function copyText(text, btn){
+  const onSuccess=()=>{
+    if(btn){btn.textContent='✅';btn.classList.add('copied');setTimeout(()=>{btn.textContent='🎤';btn.classList.remove('copied');},1500);}
+  };
+  const legacyFallback=()=>{
+    try{
+      const ta=document.createElement('textarea');
+      ta.value=text;
+      ta.setAttribute('readonly','');
+      ta.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:none;outline:none;box-shadow:none;background:transparent;font-size:16px;';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ta.setSelectionRange(0,text.length);
+      const ok=document.execCommand('copy');
+      document.body.removeChild(ta);
+      if(ok){ onSuccess(); return true; }
+    }catch(e){}
+    return false;
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(onSuccess).catch(()=>{
+      if(!legacyFallback()){
+        if(btn){btn.textContent='⚠️';setTimeout(()=>btn.textContent='🎤',1500);}
+        prompt('복사가 자동으로 안 돼요. 아래 텍스트를 직접 선택해서 복사해주세요:', text);
+      }
+    });
+  }else{
+    if(!legacyFallback()){
+      if(btn){btn.textContent='⚠️';setTimeout(()=>btn.textContent='🎤',1500);}
+      prompt('복사가 자동으로 안 돼요. 아래 텍스트를 직접 선택해서 복사해주세요:', text);
+    }
+  }
+}
+
+function copyCast(sid){
+  const row=document.querySelector(`.row[data-sid="${sid}"]`);
+  if(!row)return;
+  const dateCell=row.querySelector('.cell.date');
+  const dateRaw=[...dateCell.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent.trim()).join('').trim();
+  const dm=dateRaw.match(/(\d+)월\s*(\d+)일/);
+  const date=dm ? `${dm[1]}/${dm[2]}` : dateRaw;
+  const day=row.querySelector('.cell.day')?.textContent.trim()||'';
+  const time=row.querySelector('.cell.time')?.textContent.trim()||'';
+  const tags=[...dateCell.querySelectorAll('.event-tag')].map(t=>t.textContent.replace(/^\S+\s/,'').trim()).join(', ');
+
+  const castParts=ROLE_ATTRS.map(attr=>ACTOR[row.dataset[attr]]||row.dataset[attr]);
+
+  let text=`오셀로와 이아고\n${date} ${day} ${time}\n${castParts.join(' ')}`;
+  if(tags) text+=`\n${tags}`;
+  const btn=row.querySelector('.copy-btn');
+  copyText(text, btn);
+}
+
+function confirmFocused(){
+  if(!focusedId)return;
+  const input=document.getElementById('inp-'+focusedId);if(!input||!input.value.trim())return;
+  const key=parseSeat(input.value);
+  if(!key){input.style.borderColor='#c23b4a';setTimeout(()=>input.style.borderColor='',1000);return;}
+  if(!showSeats[focusedId])showSeats[focusedId]=[];
+  if(!showSeats[focusedId].includes(key)){showSeats[focusedId].push(key);renderTags(focusedId);updateMap();saveSeats();updateCounting();}
+  input.value='';input.style.borderColor='';input.focus();
+}
+function confirmSeat(sid){focusedId=sid;confirmFocused();}
+function removeSeat(sid,key){showSeats[sid]=(showSeats[sid]||[]).filter(s=>s!==key);renderTags(sid);updateMap();saveSeats();updateCounting();}
+function renderTags(sid){
+  const el=document.getElementById('tags-'+sid);if(!el)return;el.innerHTML='';
+  const input=document.getElementById('inp-'+sid);
+  const btn=input?input.nextElementSibling:null;
+  const cnt={};Object.values(showSeats).forEach(seats=>seats.forEach(s=>{cnt[s]=(cnt[s]||0)+1;}));
+  const seats=showSeats[sid]||[];
+  if(input) input.style.display=seats.length?'none':'';
+  if(btn) btn.style.display=seats.length?'none':'';
+  seats.forEach(key=>{
+    const c=COLORS[Math.min((cnt[key]||1),5)-1];
+    const tag=document.createElement('span');tag.className='seat-tag';tag.style.background=c.bg;
+    tag.innerHTML=key+' <span style="font-size:7px;opacity:0.8">×</span>';
+    tag.onclick=()=>removeSeat(sid,key);el.appendChild(tag);
+  });
+}
+
+document.querySelectorAll('.seat-input').forEach(inp=>{
+  inp.addEventListener('focus',()=>{focusedId=inp.id.replace('inp-','');});
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();confirmFocused();}});
+});
+
+/* ================= FILTER ================= */
+let sel={osel:[],iago:[]};
+let pinnedSel=JSON.parse(localStorage.getItem('othelloiago_pin_v1')||'null');
+if(pinnedSel){
+  ROLE_ATTRS.forEach(attr=>{
+    if(pinnedSel[attr]!=null && !Array.isArray(pinnedSel[attr])) pinnedSel[attr]=[pinnedSel[attr]];
+  });
+}
+
+function isAllEmpty(s){ return ROLE_ATTRS.every(attr=>!s[attr]||s[attr].length===0); }
+function sameSel(a,b){
+  return ROLE_ATTRS.every(attr=>{
+    const x=[...(a[attr]||[])].sort(), y=[...(b[attr]||[])].sort();
+    return x.length===y.length && x.every((v,i)=>v===y[i]);
+  });
+}
+
+function toggleFilter(attr, val){
+  const arr=sel[attr];
+  const idx=arr.indexOf(val);
+  if(idx>-1) arr.splice(idx,1);
+  else arr.push(val);
+  applyFilter();
+}
+function resetFilter(){
+  ROLE_ATTRS.forEach(attr=>{ sel[attr]=[]; });
+  applyFilter();
+}
+function applyFilter(){
+  const isAll=isAllEmpty(sel);
+
+  document.querySelectorAll('.fb2').forEach(b=>b.classList.remove('active'));
+  if(isAll) document.querySelector('.btn-all').classList.add('active');
+  ROLE_ATTRS.forEach(attr=>{
+    sel[attr].forEach(val=>{
+      document.querySelector(`.btn-${val}[onclick*="'${attr}'"]`)?.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.fb2').forEach(b=>b.classList.remove('pinned'));
+  if(pinnedSel){
+    ROLE_ATTRS.forEach(attr=>{
+      (pinnedSel[attr]||[]).forEach(val=>{
+        document.querySelector(`.btn-${val}[onclick*="'${attr}'"]`)?.classList.add('pinned');
+      });
+    });
+  }
+
+  const rows=document.querySelectorAll('.row[data-sid]');
+  rows.forEach(r=>{
+    const info=SHOW_INFO[r.dataset.sid];
+    r.classList.toggle('hidden', !matchSel(info));
+  });
+
+  document.querySelectorAll('[data-noshow]').forEach(el=>el.style.display=isAll?'':'none');
+
+  const visible=[...rows].filter(r=>!r.classList.contains('hidden')).length;
+  const parts=[];
+  ROLE_ATTRS.forEach(attr=>{ if(sel[attr].length) parts.push(sel[attr].map(v=>LABELS[v]).join('·')); });
+  document.getElementById('countInfo').textContent=(parts.length?parts.join(' · '):'전체')+' '+visible+'회';
+
+  updateCounting();
+  updateCountingDim();
+  updateMap();
+  renderPinBar();
+}
+
+function updateCountingDim(){
+  ROLE_ATTRS.forEach(attr=>{
+    const activeSet=sel[attr];
+    ROLE_KEYS[attr].forEach(key=>{
+      const numEl=document.getElementById('cnt-'+key);
+      const card=numEl ? numEl.closest('.count-card') : null;
+      if(!card) return;
+      if(activeSet.length && !activeSet.includes(key)) card.classList.add('dim');
+      else card.classList.remove('dim');
+    });
+  });
+}
+
+function renderPinBar(){
+  const bar=document.getElementById('pinBar');
+  const isAll=isAllEmpty(sel);
+  const isPinned=pinnedSel&&sameSel(sel,pinnedSel);
+  let html='';
+  if(pinnedSel&&!isAllEmpty(pinnedSel)){
+    const parts=[];
+    ROLE_ATTRS.forEach(attr=>{ if((pinnedSel[attr]||[]).length) parts.push(pinnedSel[attr].map(v=>LABELS[v]).join('·')); });
+    html+=`<span class="pin-status"><span class="pin-dot"></span>📌 ${parts.join(' · ')} 고정 중</span>`;
+    html+=`<button class="pin-btn pin-btn-clear" onclick="clearPin()">고정 해제</button>`;
+  }
+  if(!isAll && !isPinned){
+    const parts=[];
+    ROLE_ATTRS.forEach(attr=>{ if(sel[attr].length) parts.push(sel[attr].map(v=>LABELS[v]).join('·')); });
+    html+=`<button class="pin-btn pin-btn-set" onclick="setPin()">📌 ${parts.join(' · ')} 고정하기</button>`;
+  }
+  if(!html) html='<span class="pin-hint">배우를 선택하고 📌 고정하면 다음 접속 때도 유지돼요</span>';
+  bar.innerHTML=html;
+}
+function setPin(){
+  pinnedSel={};
+  ROLE_ATTRS.forEach(attr=>{ pinnedSel[attr]=[...sel[attr]]; });
+  localStorage.setItem('othelloiago_pin_v1',JSON.stringify(pinnedSel));
+  applyFilter();
+}
+function clearPin(){
+  pinnedSel=null;
+  localStorage.removeItem('othelloiago_pin_v1');
+  applyFilter();
+}
+
+/* ================= INIT ================= */
+buildMap();
+Object.keys(showSeats).forEach(sid=>renderTags(sid));
+updateMap();updateCounting();
+
+if(pinnedSel){
+  ROLE_ATTRS.forEach(attr=>{ sel[attr]=pinnedSel[attr]||[]; });
+}
+applyFilter();
+
+</script>
+</body>
+</html>
