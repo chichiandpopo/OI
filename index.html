@@ -132,13 +132,13 @@ body{font-family:'Noto Sans KR',sans-serif;
 .cgl{font-size:10.5px;font-weight:700;color:#c9a24a;text-align:center;letter-spacing:2px;margin:6px 0 3px;}
 .counting-box{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-bottom:2px;}
 .counting-box.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-width:400px;margin:0 auto 2px;}
-.count-card{flex:1;min-width:60px;max-width:95px;background:rgba(255,255,255,0.06);border-radius:10px;
-  padding:6px 3px;text-align:center;border:1px solid rgba(226,194,107,0.16);transition:opacity 0.15s,filter 0.15s;}
+.count-card{flex:1;min-width:60px;max-width:95px;border-radius:10px;
+  padding:6px 3px;text-align:center;border:1.5px solid;transition:opacity 0.15s,filter 0.15s;}
 .counting-box.grid3 .count-card{flex:none;min-width:0;max-width:none;width:auto;}
 .count-card.dim{opacity:0.3;filter:grayscale(70%);}
-.count-card .cnt-name{font-size:11px;font-weight:700;margin-bottom:2px;}
-.count-card .cnt-num{font-size:19px;font-weight:700;line-height:1;}
-.count-card .cnt-label{font-size:8px;color:#a89685;}
+.count-card .cnt-name{font-size:11px;font-weight:800;margin-bottom:2px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.6);}
+.count-card .cnt-num{font-size:19px;font-weight:800;line-height:1;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.6);}
+.count-card .cnt-label{font-size:8px;color:#f0e6d2;opacity:0.85;}
 .cnt-total-box{display:flex;justify-content:center;margin:6px 0;}
 .cnt-total-card{background:rgba(226,194,107,0.1);border-radius:14px;padding:7px 26px;text-align:center;
   border:1px solid rgba(226,194,107,0.35);}
@@ -146,6 +146,7 @@ body{font-family:'Noto Sans KR',sans-serif;
 .cnt-total-card .cnt-num{font-size:27px;font-weight:700;color:#e2c26b;line-height:1;}
 .cnt-total-card .cnt-label{font-size:10px;color:#b8a48f;}
 .cnt-total-of{font-size:0.55em;font-weight:500;color:#8a7a6c;margin-left:1px;}
+.count-card .cnt-total-of{color:rgba(255,255,255,0.8);text-shadow:0 1px 3px rgba(0,0,0,0.6);}
 
 /* ---------- seat map ---------- */
 .seat-map-section{max-width:720px;margin:14px auto 0;background:rgba(60,32,36,0.55);
@@ -168,14 +169,14 @@ body{font-family:'Noto Sans KR',sans-serif;
 .seat{width:var(--seat-size);height:var(--seat-size);font-size:8px;border-radius:3px;font-weight:800;display:flex;
   align-items:center;justify-content:center;
   background:#f0e6d2;color:#4a3a20;border:1px solid #d4c5a3;}
-.seat.mk1{outline:2px solid #ffffff;outline-offset:-1px;}
-.seat.mk2{outline:2px solid #2f8fd6;outline-offset:-1px;}
-.seat.mk3{outline:2px solid #d67a1f;outline-offset:-1px;}
-.seat.mk4{outline:2px solid #8a3fd6;outline-offset:-1px;}
-.seat.mk5{outline:2px solid #1f9a4e;outline-offset:-1px;}
+.seat.mk1{background:#c23b4a!important;color:#fff!important;border-color:#8f2735!important;}
+.seat.mk2{background:#3a72c2!important;color:#fff!important;border-color:#204d8f!important;}
+.seat.mk3{background:#d98a2e!important;color:#fff!important;border-color:#a4671c!important;}
+.seat.mk4{background:#7a4ec2!important;color:#fff!important;border-color:#54338f!important;}
+.seat.mk5{background:#3ea15f!important;color:#fff!important;border-color:#25703f!important;}
 .seat-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px;font-size:11px;}
 .seat-legend-item{display:flex;align-items:center;gap:4px;color:#dcd0c4;}
-.seat-legend-dot{width:11px;height:11px;border-radius:2px;display:inline-block;border:2px solid;background:rgba(255,255,255,0.06);}
+.seat-legend-dot{width:11px;height:11px;border-radius:2px;display:inline-block;border:1px solid rgba(0,0,0,0.2);}
 
 .footer{text-align:center;font-size:10px;color:#a89685;margin-top:16px;line-height:1.8;padding:0 20px;}
 .footer b{color:#e2c26b;}
@@ -296,11 +297,11 @@ body{font-family:'Noto Sans KR',sans-serif;
 <div class="counting-section">
   <div class="cgl">오셀로</div>
   <div class="counting-box grid3">
-    <div class="count-card"><div class="cnt-name" style="color:#a94a35;">김지온</div><div class="cnt-num" style="color:#a94a35;"><span id="cnt-gimjion">0</span><span id="tot-gimjion" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#b06a2a;">박규원</div><div class="cnt-num" style="color:#b06a2a;"><span id="cnt-parkgyuwon">0</span><span id="tot-parkgyuwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#b0912a;">변희상</div><div class="cnt-num" style="color:#b0912a;"><span id="cnt-byunheesang">0</span><span id="tot-byunheesang" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
+    <div class="count-card" style="background:rgba(169,74,53,0.38);border-color:#a94a35;"><div class="cnt-name">김지온</div><div class="cnt-num"><span id="cnt-gimjion">0</span><span id="tot-gimjion" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card" style="background:rgba(176,106,42,0.38);border-color:#b06a2a;"><div class="cnt-name">박규원</div><div class="cnt-num"><span id="cnt-parkgyuwon">0</span><span id="tot-parkgyuwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card" style="background:rgba(176,145,42,0.38);border-color:#b0912a;"><div class="cnt-name">변희상</div><div class="cnt-num"><span id="cnt-byunheesang">0</span><span id="tot-byunheesang" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
   </div>
 <div class="cgl">이아고</div>
   <div class="counting-box grid3">
-    <div class="count-card"><div class="cnt-name" style="color:#1f7f8c;">곽민수</div><div class="cnt-num" style="color:#1f7f8c;"><span id="cnt-gwakminsu">0</span><span id="tot-gwakminsu" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#1f5f8c;">김경록</div><div class="cnt-num" style="color:#1f5f8c;"><span id="cnt-gimkyungrok">0</span><span id="tot-gimkyungrok" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card"><div class="cnt-name" style="color:#5a2f8c;">양지원</div><div class="cnt-num" style="color:#5a2f8c;"><span id="cnt-yangjiwon">0</span><span id="tot-yangjiwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
+    <div class="count-card" style="background:rgba(31,127,140,0.38);border-color:#1f7f8c;"><div class="cnt-name">곽민수</div><div class="cnt-num"><span id="cnt-gwakminsu">0</span><span id="tot-gwakminsu" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card" style="background:rgba(31,95,140,0.38);border-color:#1f5f8c;"><div class="cnt-name">김경록</div><div class="cnt-num"><span id="cnt-gimkyungrok">0</span><span id="tot-gimkyungrok" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div><div class="count-card" style="background:rgba(90,47,140,0.38);border-color:#5a2f8c;"><div class="cnt-name">양지원</div><div class="cnt-num"><span id="cnt-yangjiwon">0</span><span id="tot-yangjiwon" class="cnt-total-of">/0</span></div><div class="cnt-label">회</div></div>
   </div>
   <div class="cnt-total-box">
     <div class="cnt-total-card">
@@ -339,11 +340,11 @@ body{font-family:'Noto Sans KR',sans-serif;
 const ZONES = {"L": {"label": "좌측", "slots": 6, "rows": [[{"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "rnol", "slot": 0}, {"n": 2, "cat": "rnol", "slot": 1}, {"n": 3, "cat": "rnol", "slot": 2}, {"n": 4, "cat": "rnol", "slot": 3}, {"n": 5, "cat": "rnol", "slot": 4}, {"n": 6, "cat": "rnol", "slot": 5}], [{"n": 1, "cat": "snol", "slot": 0}, {"n": 2, "cat": "snol", "slot": 1}, {"n": 3, "cat": "snol", "slot": 2}, {"n": 4, "cat": "snol", "slot": 3}, {"n": 5, "cat": "snol", "slot": 4}, {"n": 6, "cat": "snol", "slot": 5}], [{"n": 1, "cat": "snol", "slot": 0}, {"n": 2, "cat": "snol", "slot": 1}, {"n": 3, "cat": "snol", "slot": 2}, {"n": 4, "cat": "snol", "slot": 3}, {"n": 5, "cat": "snol", "slot": 4}, {"n": 6, "cat": "snol", "slot": 5}]]}, "C": {"label": "중앙", "slots": 8, "rows": [[{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 1}, {"n": 8, "cat": "rnol", "slot": 2}, {"n": 9, "cat": "rnol", "slot": 3}, {"n": 10, "cat": "rnol", "slot": 4}, {"n": 11, "cat": "rtl", "slot": 5}, {"n": 12, "cat": "rtl", "slot": 6}, {"n": 13, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "rnol", "slot": 0}, {"n": 8, "cat": "rnol", "slot": 1}, {"n": 9, "cat": "rnol", "slot": 2}, {"n": 10, "cat": "rnol", "slot": 3}, {"n": 11, "cat": "rtl", "slot": 4}, {"n": 12, "cat": "rtl", "slot": 5}, {"n": 13, "cat": "rtl", "slot": 6}, {"n": 14, "cat": "rtl", "slot": 7}], [{"n": 7, "cat": "snol", "slot": 1}, {"n": 8, "cat": "snol", "slot": 2}, {"n": 9, "cat": "snol", "slot": 3}, {"n": 10, "cat": "snol", "slot": 4}, {"n": 11, "cat": "stl", "slot": 5}, {"n": 12, "cat": "stl", "slot": 6}, {"n": 13, "cat": "stl", "slot": 7}], [{"n": 7, "cat": "snol", "slot": 0}, {"n": 8, "cat": "snol", "slot": 1}, {"n": 9, "cat": "snol", "slot": 2}, {"n": 10, "cat": "snol", "slot": 3}, {"n": 11, "cat": "stl", "slot": 4}, {"n": 12, "cat": "stl", "slot": 5}, {"n": 13, "cat": "stl", "slot": 6}, {"n": 14, "cat": "stl", "slot": 7}]]}, "R": {"label": "우측", "slots": 8, "rows": [[{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}, {"n": 21, "cat": "rtl", "slot": 7}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "rtl", "slot": 0}, {"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}], [{"n": 15, "cat": "rtl", "slot": 1}, {"n": 16, "cat": "rtl", "slot": 2}, {"n": 17, "cat": "rtl", "slot": 3}, {"n": 18, "cat": "rtl", "slot": 4}, {"n": 19, "cat": "rtl", "slot": 5}, {"n": 20, "cat": "rtl", "slot": 6}], [{"n": 14, "cat": "stl", "slot": 0}, {"n": 15, "cat": "stl", "slot": 1}, {"n": 16, "cat": "stl", "slot": 2}, {"n": 17, "cat": "stl", "slot": 3}, {"n": 18, "cat": "stl", "slot": 4}, {"n": 19, "cat": "stl", "slot": 5}, {"n": 20, "cat": "stl", "slot": 6}], [{"n": 15, "cat": "stl", "slot": 1}, {"n": 16, "cat": "stl", "slot": 2}, {"n": 17, "cat": "stl", "slot": 3}, {"n": 18, "cat": "stl", "slot": 4}, {"n": 19, "cat": "stl", "slot": 5}, {"n": 20, "cat": "stl", "slot": 6}]]}};
 const ROWLETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
 const COLORS=[
-  {ring:'#ffffff',label:'1회'},
-  {ring:'#2f8fd6',label:'2회'},
-  {ring:'#d67a1f',label:'3회'},
-  {ring:'#8a3fd6',label:'4회'},
-  {ring:'#1f9a4e',label:'5회 이상'},
+  {bg:'#c23b4a',label:'1회'},
+  {bg:'#3a72c2',label:'2회'},
+  {bg:'#d98a2e',label:'3회'},
+  {bg:'#7a4ec2',label:'4회'},
+  {bg:'#3ea15f',label:'5회 이상'},
 ];
 
 const showSeats=JSON.parse(localStorage.getItem('othelloiago_seats_v1')||'{}');
@@ -531,7 +532,7 @@ function updateLegend(cnt){
   el.innerHTML='';
   for(let i=1;i<=Math.min(max,5);i++){
     const c=COLORS[i-1];const item=document.createElement('div');item.className='seat-legend-item';
-    item.innerHTML='<div class="seat-legend-dot" style="border-color:'+c.ring+'"></div>'+c.label;
+    item.innerHTML='<div class="seat-legend-dot" style="background:'+c.bg+'"></div>'+c.label;
     el.appendChild(item);
   }
 }
@@ -627,7 +628,7 @@ function renderTags(sid){
   seats.forEach(key=>{
     const c=COLORS[Math.min((cnt[key]||1),5)-1];
     const tag=document.createElement('span');tag.className='seat-tag';
-    tag.style.borderColor=c.ring;
+    tag.style.background=c.bg;tag.style.borderColor=c.bg;
     tag.innerHTML=seatDisplay(key)+' <span style="font-size:7px;opacity:0.8">×</span>';
     tag.onclick=()=>removeSeat(sid,key);el.appendChild(tag);
   });
