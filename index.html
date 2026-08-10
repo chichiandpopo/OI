@@ -231,8 +231,8 @@ body{font-family:'Noto Sans KR',sans-serif;
       <b>2026.9.8(TUE) – 11.22(SUN)</b><br>대학로 자유극장
     </div>
     <div class="ticket-row">
-      <a href="https://www.ticketlink.co.kr/" target="_blank" class="ticket-btn">🎟 티켓링크</a>
-      <a href="https://tickets.interpark.com/" target="_blank" class="ticket-btn">🎟 NOL티켓</a>
+      <a href="https://www.ticketlink.co.kr/product/64855" target="_blank" class="ticket-btn">🎟 티켓링크</a>
+      <a href="https://nol.yanolja.com/ticket/products/26011611" target="_blank" class="ticket-btn">🎟 NOL티켓</a>
     </div>
     <div class="info-row">
       <a href="https://chichiandpopo.github.io/OI/oi_seat.jpg" target="_blank" class="info-btn">🪑 좌석 배치도</a>
@@ -552,6 +552,29 @@ function seatDisplay(key){
   // 내부 저장은 zone-row-num, 화면 표시는 row-num만 (구역 문자는 숨김)
   const parts=key.split('-'); return parts[1]+'-'+parts[2];
 }
+function showCopyFallbackModal(text){
+  const old=document.getElementById('copyFallbackModal'); if(old) old.remove();
+  const overlay=document.createElement('div'); overlay.id='copyFallbackModal';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;';
+  const box=document.createElement('div');
+  box.style.cssText='background:#2e1417;border:1px solid rgba(226,194,107,0.4);border-radius:14px;padding:16px;max-width:340px;width:100%;';
+  const label=document.createElement('div');
+  label.textContent='자동 복사가 안 돼요. 아래 내용을 길게 눌러서 직접 복사해주세요.';
+  label.style.cssText='color:#e2c26b;font-size:12.5px;font-weight:700;margin-bottom:10px;line-height:1.5;';
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.readOnly=true;
+  ta.style.cssText='width:100%;height:100px;padding:8px;border-radius:8px;border:1px solid rgba(226,194,107,0.3);background:rgba(255,255,255,0.08);color:#f3ebe1;font-size:13px;font-family:inherit;resize:none;';
+  const closeBtn=document.createElement('button');
+  closeBtn.textContent='닫기';
+  closeBtn.style.cssText='margin-top:10px;width:100%;padding:8px;border:none;border-radius:8px;background:#a9202c;color:#fff;font-weight:700;font-size:13px;cursor:pointer;';
+  closeBtn.onclick=()=>overlay.remove();
+  overlay.onclick=(e)=>{ if(e.target===overlay) overlay.remove(); };
+  box.appendChild(label); box.appendChild(ta); box.appendChild(closeBtn);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+  ta.focus(); ta.select();
+  try{ document.execCommand('copy'); }catch(e){}
+}
 function copyText(text, btn){
   const onSuccess=()=>{
     if(btn){btn.textContent='✅';btn.classList.add('copied');setTimeout(()=>{btn.textContent='🎤';btn.classList.remove('copied');},1500);}
@@ -576,13 +599,13 @@ function copyText(text, btn){
     navigator.clipboard.writeText(text).then(onSuccess).catch(()=>{
       if(!legacyFallback()){
         if(btn){btn.textContent='⚠️';setTimeout(()=>btn.textContent='🎤',1500);}
-        prompt('복사가 자동으로 안 돼요. 아래 텍스트를 직접 선택해서 복사해주세요:', text);
+        showCopyFallbackModal(text);
       }
     });
   }else{
     if(!legacyFallback()){
       if(btn){btn.textContent='⚠️';setTimeout(()=>btn.textContent='🎤',1500);}
-      prompt('복사가 자동으로 안 돼요. 아래 텍스트를 직접 선택해서 복사해주세요:', text);
+      showCopyFallbackModal(text);
     }
   }
 }
