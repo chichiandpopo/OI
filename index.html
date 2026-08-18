@@ -227,8 +227,6 @@ body{font-family:'Noto Sans KR',sans-serif;
 </style>
 </head>
 <body>
-<a href="https://chichiandpopo.github.io/stage_archive/" target="_blank" class="archive-btn">🎭 관극 아카이브</a>
-<button onclick="saveSettleImage(this)" class="archive-btn save-btn" style="top:52px;">🖼️ 정산판 저장</button>
 
 <div class="hero">
   <div class="hero-inner">
@@ -333,6 +331,11 @@ body{font-family:'Noto Sans KR',sans-serif;
   <label style="padding:6px 16px;background:rgba(255,255,255,0.6);border:1px solid rgba(60,55,48,0.2);border-radius:20px;font-size:11px;font-weight:700;color:#7a1421;cursor:pointer;">
     📂 데이터 불러오기<input type="file" accept=".json" onchange="importData(event)" style="display:none;">
   </label>
+</div>
+
+<div style="max-width:720px;margin:6px auto 4px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;">
+  <a href="https://chichiandpopo.github.io/stage_archive/" target="_blank" style="padding:6px 16px;background:rgba(255,255,255,0.6);border:1px solid rgba(60,55,48,0.2);border-radius:20px;font-size:11px;font-weight:700;color:#7a1421;text-decoration:none;">🎭 관극 아카이브</a>
+  <button onclick="saveSettleImage(this)" class="save-btn" style="padding:6px 16px;background:rgba(255,255,255,0.6);border:1px solid rgba(60,55,48,0.2);border-radius:20px;font-size:11px;font-weight:700;color:#7a1421;cursor:pointer;font-family:inherit;">🖼️ 정산판 저장</button>
 </div>
 
 <div class="footer">
