@@ -755,7 +755,7 @@ function copyCast(sid){
   const date=dm ? `${dm[1]}/${dm[2]}` : dateRaw;
   const day=row.querySelector('.cell.day')?.textContent.trim()||'';
   const time=row.querySelector('.cell.time')?.textContent.trim()||'';
-  const tags=[...dateCell.querySelectorAll('.event-tag')].map(t=>t.textContent.replace(/^\S+\s/,'').trim()).join(', ');
+  const tags=[...dateCell.querySelectorAll('.event-tag')].map(t=>t.textContent.trim()).join(', ');
 
   const castParts=ROLE_ATTRS.map(attr=>ACTOR[row.dataset[attr]]||row.dataset[attr]);
 
