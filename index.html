@@ -150,9 +150,10 @@ body{font-family:'Noto Sans KR',sans-serif;
 .bd-role::before{background:linear-gradient(90deg,transparent,#c9a24a);}
 .bd-role::after{background:linear-gradient(270deg,transparent,#c9a24a);}
 .bd-role-t{font-family:'Nanum Myeongjo',serif;font-weight:800;font-size:21px;color:#ecd191;letter-spacing:3px;text-indent:3px;}
-.bd-cast{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative;}
+.bd-cast{display:flex;justify-content:center;gap:12px;position:relative;}
+.bd-cast .count-card{flex:0 0 calc((100% - 24px)/3);min-width:0;}
 .count-card{text-align:center;transition:opacity 0.15s,filter 0.15s;}
-.count-card.dim{opacity:0.3;filter:grayscale(70%);}
+.count-card.dim{display:none;}
 .ac-frame{position:relative;padding:4px;background:#1a0b0d;border:1.5px solid #b8923f;
   box-shadow:inset 0 0 0 1px rgba(226,194,107,0.3);}
 .ac-frame .cn{position:absolute;width:7px;height:7px;background:#e2c26b;transform:rotate(45deg);z-index:2;}
@@ -612,8 +613,14 @@ function updateCounting(){
     const c=document.getElementById('cnt-'+k); if(c) c.textContent=cnt[k]||0;
     const t=document.getElementById('tot-'+k); if(t) t.textContent='/'+(totCnt[k]||0);
   });
+  // 같은 역 배우를 2명 이상 선택하면 분모를 이 공연의 전체 공연 수(99회)로
+  ROLE_ATTRS.forEach(attr=>{
+    if((sel[attr]||[]).length>=2){
+      ROLE_KEYS[attr].forEach(k=>{ const t=document.getElementById('tot-'+k); if(t) t.textContent='/'+document.querySelectorAll('.row[data-sid]').length; });
+    }
+  });
   const totalEl=document.getElementById('cnt-total'); if(totalEl) totalEl.textContent=total;
-  const totTotalEl=document.getElementById('tot-total'); if(totTotalEl) totTotalEl.textContent='/'+totTotal;
+  const totTotalEl=document.getElementById('tot-total'); if(totTotalEl){ const multi=ROLE_ATTRS.some(a=>(sel[a]||[]).length>=2); totTotalEl.textContent='/'+(multi?document.querySelectorAll('.row[data-sid]').length:totTotal); }
   document.querySelectorAll('.pair-cell').forEach(el=>{
     const k=el.dataset.pair, c=pairCnt[k]||0, t=pairTot[k]||0;
     el.querySelector('.pr-c').textContent=c;
@@ -918,7 +925,7 @@ function updateCountingDim(){
       const numEl=document.getElementById('cnt-'+key);
       const card=numEl ? numEl.closest('.count-card') : null;
       if(!card) return;
-      if(activeSet.length && !activeSet.includes(key)) card.classList.add('dim');
+      if(activeSet.length===1 && !activeSet.includes(key)) card.classList.add('dim');
       else card.classList.remove('dim');
     });
   });
